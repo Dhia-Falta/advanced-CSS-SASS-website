@@ -1,0 +1,127 @@
+
+.card{
+	perspective: 150rem;
+	-moz-perspective: 150rem;
+	position: relative;
+	height: 27rem;
+	width: 78%;
+	margin: 0 auto;
+	font-weight: bold;
+	font-family: inherit;
+
+	.side{
+		height: 27rem;
+		transition: all 1.8s ;
+		position:absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		backface-visibility: hidden;
+		border-radius: 5px;
+		overflow: hidden;
+		box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+
+		&.front{
+			background-color: #dedef3;	
+			
+			.card-img{
+				background-size: cover;
+				height: 45%;
+				border-radius: 5px 5px 0 0;
+				clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+
+				&.img1{
+					background-image: url(../images/beach-boat.jpg);
+				}
+				&.img2{
+					background-image: url(../images/chair-by-a-tree.jpg);
+				}
+				&.img3{
+					background-image: url(../images/beside-bonfire.jpg);
+				}
+			}
+
+			.card-heading{
+				font-size: $sub-heading-size;
+				font-weight: bold;
+				text-transform: capitalize;
+				color: $color-white;
+				position: absolute;
+				top: 7rem;
+				right: 2rem;
+
+				span{
+					padding: .5rem 1.5rem;
+					-webkit-box-decoration-break: clone;
+					box-decoration-break: clone;
+
+					&.card-span1{
+						background-image: linear-gradient(to right bottom, #fa709a78 0%, #fee140 100%);
+					}
+					&.card-span2{
+						background-image: linear-gradient(to right bottom, #24d29278 0%, #000000bf 100%);
+					}
+					&.card-span3{
+						background-image: linear-gradient(to right bottom, #e0423f78 0%, #4ca8e0 100%);
+					}
+				}	
+			}
+
+			.card-details{
+				ul{
+					list-style: none;
+					width: 80%;
+					margin: 0 auto;
+					li{
+						font-size: $text-size;
+						text-align: center;
+						color: $color-heading;
+						padding: .48rem;
+
+						&:not(:last-child){
+							border-bottom: 1px solid $color-grey;
+						}
+					}
+				}
+			}
+		}
+
+		&.back{
+			transform: rotateY(180deg);
+			&.back1{
+				background-image: linear-gradient(to right bottom, #fa709a 0%, #fee140 100%);
+			}
+			&.back2{
+				background-image: linear-gradient(to right bottom, #24d292 0%, #000000bf 100%);
+			}
+			&.back3{
+				background-image: linear-gradient(to right bottom, #e0423f 0%, #4ca8e0 100%);
+			}
+
+			.price-box{
+				color: $color-white;
+				position:absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 90%;
+				text-align: center;
+
+				.price-text{
+					font-size: $sub-heading-size;
+				}
+				.price-value{
+					font-size: calc(#{$section-heading-size} + 1.5rem);
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+	
+	&:hover .front{
+		transform: rotateY(-180deg);
+	}
+	&:hover .back{
+		transform: rotateY(0);
+	}
+}

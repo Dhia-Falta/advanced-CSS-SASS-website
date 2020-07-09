@@ -1,0 +1,49 @@
+.about{
+	background-color: $color-grey-light;
+	padding: 2rem 0 12rem 0;
+
+}
+.features{
+	padding: 10rem 0;
+	background-image: linear-gradient(to right bottom, rgba($color-red-light, 0.6), rgba($color-purple, 0.8)), url(../images/balloons-photo.jpg);
+	background-size: cover;
+	clip-path: polygon(80% 0, 100% 0, 100% 60%, 100% 86%, 20% 100%, 0 100%, 0 14%);
+
+}
+.tours{
+	background-color: $color-grey-light;
+	padding: 2rem 0 4rem 0;
+	.row {
+		[class^="col-"]:not(:last-child) {
+	    	margin-right: 0;
+		}
+	    .col-1-of-3{
+			width: calc(100% / 3 );
+		}
+	}
+}
+
+.stories {
+	position: relative;
+	padding: 3rem 0 2rem 0;
+	.row {
+		margin-bottom: $gutter-vertical - 2;
+	}
+}
+
+.section-book{
+	padding: 6rem 4rem 6rem 4rem;
+	background-image: linear-gradient(to right bottom, rgba($color-red-light, 0.6), rgba($color-purple, 0.8));
+	overflow: hidden;
+	.book{
+		background-image: linear-gradient(105deg, rgba($color-white, .8) 0%, rgba($color-white, .8) 50%, transparent 50%) ,url(../images/boat-calm.jpg);
+		background-size: cover;
+		height:30rem;
+		border-radius: 4px;
+		box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+		.form{
+			width: 50%;
+			padding: 3rem;
+		}
+	}
+}

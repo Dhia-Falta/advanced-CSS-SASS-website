@@ -1,0 +1,64 @@
+
+body{
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+	line-height: 1.7;
+	color: $color-black;
+}
+
+.heading-primary{
+	color: white;
+	text-transform: uppercase;
+	backface-visibility: hidden;
+	margin-bottom: 40px;
+	
+	.title{
+		display: block;
+		font-size: 55px;
+		letter-spacing: 30px;
+		font-weight: 700;
+		animation-name: moveInLeft;
+		animation-duration: 2s;
+		animation-timing-function: ease-in;
+	}
+	.subTitle{
+		display: block;
+		font-size: 18px;
+		font-weight: 100;
+		letter-spacing: 15.5px;
+		animation-name: moveInRight;
+		animation-duration: 2s;
+		animation-timing-function: ease-in;
+	}
+}
+
+.heading-secondary {
+	font-size: $section-heading-size;
+	text-transform: uppercase;
+	font-weight: bold;
+	display: inline-block;
+	background-image: linear-gradient(to right , $color-red-light, $color-purple);
+	-webkit-background-clip: text;
+	color: transparent;
+	letter-spacing: 2px;
+	transition: all .2s;
+	&:hover{
+		transform: scale(1.1);
+		text-shadow: .5rem 1rem 2rem rgba($color-black, .7);
+	}
+}
+
+.heading-tertiary{
+	font-size: $sub-heading-size;
+	color: $color-heading;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.parag{
+	font-size: $text-size;
+	color: $color-text;
+	&:not(:last-child){
+		margin-bottom: 2rem;
+	}
+}
